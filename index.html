@@ -49,7 +49,33 @@
                             2022-08-04 16:30 至 2022-08-04 19:30
                         </div>
                     </div>
-                    <div id="0"
+					<div id="0"
+                     style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;"></div>
+            </li><li data-v-69238719="" class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                <div data-v-69238719="" class="radio1"></div>
+                <div data-v-69238719="" class="radio2"></div>
+                <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                        data-v-69238719="">已过期</span></div>
+                <div data-v-69238719="" class="h60 br">
+                    <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                    <div data-v-69238719="" class="flex justify-center align-center mt5">
+                        2022-10-02 8:00 至 2022-10-02 23:30
+                    </div>
+                </div>
+				<div id="1"
+                     style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;"></div>
+            </li><li data-v-69238719="" class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
+                <div data-v-69238719="" class="radio1"></div>
+                <div data-v-69238719="" class="radio2"></div>
+                <div data-v-69238719="" class="title h60 flex justify-center align-center fz23 red"><span
+                        data-v-69238719="">已过期</span></div>
+                <div data-v-69238719="" class="h60 br">
+                    <div data-v-69238719="" class="flex justify-center align-center mt5">有效期</div>
+                    <div data-v-69238719="" class="flex justify-center align-center mt5">
+                        2022-09-10 10:00 至 2022-08-06 22:30
+                    </div>
+                </div>
+                    <div id="2"
                          style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;"></div>
                 </li><li data-v-69238719="" class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
                 <div data-v-69238719="" class="radio1"></div>
@@ -62,7 +88,7 @@
                         2022-08-11 16:30 至 2022-08-11 18:15
                     </div>
                 </div>
-                <div id="1"
+                <div id="3"
                      style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;"></div>
             </li><li data-v-69238719="" class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
                 <div data-v-69238719="" class="radio1"></div>
@@ -75,7 +101,7 @@
                         2022-08-06 15:00 至 2022-08-06 22:30
                     </div>
                 </div>
-                <div id="2"
+                <div id="4"
                      style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;"></div>
             </li><li data-v-69238719="" class="bg-white bdr-p5 h120 relative mb10 pos-rel hidden numberClass watermark0">
                 <div data-v-69238719="" class="radio1"></div>
@@ -88,7 +114,7 @@
                         2022-05-01 09:30 至 2022-05-02 19:30
                     </div>
                 </div>
-                <div id="3"
+                <div id="5"
                      style="pointer-events: none; top: 5px; left: -305px; position: absolute; z-index: 100000; width: 1e+07px; height: 622px; background: url() left top repeat;"></div>
             </li>
             </ul>
@@ -271,11 +297,11 @@
     //生成背景
     let a = today
     let b = document.createElement("canvas");
-    b.width = 120;
+    b.width = 135;
     b.height = 55;
     let c = b.getContext("2d");
     c.rotate(-15 * Math.PI / -180);
-    c.font = "18px Vedana";
+    c.font = "20px Vedana";
     // c.fillStyle = "rgba(1, 187, 44, 0.40)";
     c.fillStyle = "rgba(245, 56, 42, 0.40)";
     c.textAlign = "left";
@@ -285,11 +311,11 @@
     // 单独给第一挂载绿色
     let a1 = today
     let b1 = document.createElement("canvas");
-    b1.width = 120;
+    b1.width = 135;
     b1.height = 55;
     let c1 = b1.getContext("2d");
     c1.rotate(-15 * Math.PI / -180);
-    c1.font = "18px Vedana";
+    c1.font = "20px Vedana";
     c1.fillStyle = "rgba(1, 187, 44, 0.40)";
     // c1.fillStyle = "rgba(245, 56, 42, 0.40)";
     c1.textAlign = "left";
@@ -303,6 +329,10 @@
     document.getElementById('2').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
 
     document.getElementById('3').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
+	
+	document.getElementById('4').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
+
+    document.getElementById('5').style.background = "url(" + b.toDataURL("image/png") + ") left top repeat";
 
     let t = document.getElementsByClassName('title h60')[0];
     t.classList.replace('red', 'green');
@@ -321,7 +351,12 @@ setInterval(()=>{
     document.getElementById('1').style.left=i+'px';
     document.getElementById('2').style.left=i+'px';
     document.getElementById('3').style.left=i+'px';
-},50)
+	document.getElementById('4').style.left=i+'px';
+	document.getElementById('5').style.left=i+'px';
+	// document.getElementById('6').style.left=i+'px';
+	// document.getElementById('7').style.left=i+'px';
+	// document.getElementById('8').style.left=i+'px';
+},100)
 </script>
 </body>
 </html>
